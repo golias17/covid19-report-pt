@@ -107,7 +107,7 @@ const copyText = (data) => {
 	const text =
 		'*Relatório do dia ' +
 		data[data.length - 2][0] +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos em Vigilância: ' +
 		data[data.length - 2][18].toString() +
 		' (' +
@@ -120,7 +120,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Obitos: ' +
 		data[data.length - 2][13] +
 		' (' +
@@ -133,7 +133,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos Recuperados: ' +
 		data[data.length - 2][12] +
 		' (' +
@@ -146,7 +146,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos Confirmados: ' +
 		data[data.length - 2][2] +
 		' (' +
@@ -155,7 +155,7 @@ const copyText = (data) => {
 		((data[data.length - 2][11] / data[data.length - 2][2]) * 100)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos Ativos: ' +
 		data[data.length - 2][86] +
 		' (' +
@@ -168,7 +168,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos Internados na Enfermaria: ' +
 		data[data.length - 2][87] +
 		' (' +
@@ -181,7 +181,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n\r' +
+		'*\n' +
 		'Total de Casos Internados em UCI: ' +
 		data[data.length - 2][15] +
 		' (' +
