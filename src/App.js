@@ -64,7 +64,7 @@ function App() {
 	return (
 		<>
 			{loading === false ? (
-				<HashRouter basename="/covid19-report-pt">
+				<HashRouter>
 					<Navbar bg="dark" variant="dark">
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Brand>
@@ -73,9 +73,11 @@ function App() {
 							</Container>
 						</Navbar.Brand>
 						<Nav className="mr-auto">
-							<Nav.Link href="/#/">Summary</Nav.Link>
-							<Nav.Link href="/#/visual">Visual Summary</Nav.Link>
-							<Nav.Link href="/#/graph">Graphs</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/#/">Summary</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/#/visual">
+								Visual Summary
+							</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/#/graph">Graphs</Nav.Link>
 						</Nav>
 					</Navbar>
 					<Switch>
