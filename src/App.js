@@ -81,11 +81,11 @@ function App() {
 									alignItems: 'center',
 								}}
 							>
-								<Nav.Link href="/covid19-report-pt/#/">Summary</Nav.Link>
+								<Nav.Link href="/covid19-report-pt/#/">Sumário</Nav.Link>
 								<Nav.Link href="/covid19-report-pt/#/visual">
-									Visual Summary
+									Sumário Visual
 								</Nav.Link>
-								<Nav.Link href="/covid19-report-pt/#/graph">Graphs</Nav.Link>
+								<Nav.Link href="/covid19-report-pt/#/graph">Graficos</Nav.Link>
 							</Nav>
 						</Navbar>
 						<Switch>
@@ -93,7 +93,7 @@ function App() {
 								<Text info={data} />
 							</Route>
 							<Route path="/visual" component={Visual}>
-								<Visual />
+								<Visual info={data} />
 							</Route>
 							<Route path="/graph" component={Graph}>
 								<Graph />
