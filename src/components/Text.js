@@ -105,7 +105,7 @@ const report = (data) => {
 
 const copyText = (data) => {
 	const text =
-		'*Relatório do dia' +
+		'*Relatório do dia ' +
 		data[data.length - 2][0] +
 		'*\n' +
 		'Total de Casos em Vigilância: ' +

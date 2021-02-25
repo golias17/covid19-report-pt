@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { readRemoteFile } from 'react-papaparse';
 import Spinner from 'react-bootstrap/Spinner';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Image from 'react-bootstrap/Image';
@@ -64,34 +63,44 @@ function App() {
 	return (
 		<>
 			{loading === false ? (
-				<HashRouter>
-					<Navbar bg="dark" variant="dark">
-						<Navbar.Toggle aria-controls="basic-navbar-nav" />
-						<Navbar.Brand>
-							<Container>
+				<div
+					style={{
+						textAlign: 'center',
+						alignItems: 'center',
+					}}
+				>
+					<HashRouter>
+						<Navbar bg="dark" variant="dark">
+							<Navbar.Brand>
 								<Image src={covid} roundedCircle />
-							</Container>
-						</Navbar.Brand>
-						<Nav className="mr-auto">
-							<Nav.Link href="/covid19-report-pt/#/">Summary</Nav.Link>
-							<Nav.Link href="/covid19-report-pt/#/visual">
-								Visual Summary
-							</Nav.Link>
-							<Nav.Link href="/covid19-report-pt/#/graph">Graphs</Nav.Link>
-						</Nav>
-					</Navbar>
-					<Switch>
-						<Route exact path="/" component={Text}>
-							<Text info={data} />
-						</Route>
-						<Route path="/visual" component={Visual}>
-							<Visual />
-						</Route>
-						<Route path="/graph" component={Graph}>
-							<Graph />
-						</Route>
-					</Switch>
-				</HashRouter>
+							</Navbar.Brand>
+							<Nav
+								className="mr-auto"
+								style={{
+									textAlign: 'center',
+									alignItems: 'center',
+								}}
+							>
+								<Nav.Link href="/covid19-report-pt/#/">Summary</Nav.Link>
+								<Nav.Link href="/covid19-report-pt/#/visual">
+									Visual Summary
+								</Nav.Link>
+								<Nav.Link href="/covid19-report-pt/#/graph">Graphs</Nav.Link>
+							</Nav>
+						</Navbar>
+						<Switch>
+							<Route exact path="/" component={Text}>
+								<Text info={data} />
+							</Route>
+							<Route path="/visual" component={Visual}>
+								<Visual />
+							</Route>
+							<Route path="/graph" component={Graph}>
+								<Graph />
+							</Route>
+						</Switch>
+					</HashRouter>
+				</div>
 			) : (
 				<div className="App">
 					<header className="App-header">
