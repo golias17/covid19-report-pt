@@ -73,19 +73,21 @@ function App() {
 							</Container>
 						</Navbar.Brand>
 						<Nav className="mr-auto">
-							<Nav.Link href="/">Summary</Nav.Link>
-							<Nav.Link href="/visual">Visual Summary</Nav.Link>
-							<Nav.Link href="/graph">Graphs</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/">Summary</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/visual">
+								Visual Summary
+							</Nav.Link>
+							<Nav.Link href="/covid19-report-pt/graph">Graphs</Nav.Link>
 						</Nav>
 					</Navbar>
 					<Switch>
-						<Route exact path="/" component={Text}>
+						<Route exact path="/covid19-report-pt/" component={Text}>
 							<Text info={data} />
 						</Route>
-						<Route path="/visual" component={Visual}>
+						<Route path="/covid19-report-pt/visual" component={Visual}>
 							<Visual />
 						</Route>
-						<Route path="/graph" component={Graph}>
+						<Route path="/covid19-report-pt/graph" component={Graph}>
 							<Graph />
 						</Route>
 					</Switch>
