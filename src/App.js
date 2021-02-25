@@ -64,7 +64,7 @@ function App() {
 	return (
 		<>
 			{loading === false ? (
-				<HashRouter basename="/">
+				<HashRouter basename="/covid19-report-pt">
 					<Navbar bg="dark" variant="dark">
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Brand>
