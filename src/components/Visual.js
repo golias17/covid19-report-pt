@@ -5,7 +5,7 @@ const Visual = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1>On work</h1>
+				<h1>On work Visual</h1>
 			</header>
 		</div>
 	);

@@ -5,7 +5,7 @@ const Graph = () => {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<h1>On work</h1>
+				<h1>On work Graphs</h1>
 			</header>
 		</div>
 	);
