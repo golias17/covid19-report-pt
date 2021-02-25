@@ -64,7 +64,7 @@ function App() {
 	return (
 		<>
 			{loading === false ? (
-				<Router>
+				<Router basename={process.env.PUBLIC_URL}>
 					<Navbar bg="dark" variant="dark">
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Brand>
