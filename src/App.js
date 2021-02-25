@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import { readRemoteFile } from 'react-papaparse';
 import Spinner from 'react-bootstrap/Spinner';
 import Container from 'react-bootstrap/Container';
@@ -64,7 +64,7 @@ function App() {
 	return (
 		<>
 			{loading === false ? (
-				<Router base={process.env.PUBLIC_URL}>
+				<HashRouter basename="/">
 					<Navbar bg="dark" variant="dark">
 						<Navbar.Toggle aria-controls="basic-navbar-nav" />
 						<Navbar.Brand>
@@ -73,9 +73,9 @@ function App() {
 							</Container>
 						</Navbar.Brand>
 						<Nav className="mr-auto">
-							<Nav.Link href="/">Summary</Nav.Link>
-							<Nav.Link href="/visual">Visual Summary</Nav.Link>
-							<Nav.Link href="/graph">Graphs</Nav.Link>
+							<Nav.Link href="/#/">Summary</Nav.Link>
+							<Nav.Link href="/#/visual">Visual Summary</Nav.Link>
+							<Nav.Link href="/#/graph">Graphs</Nav.Link>
 						</Nav>
 					</Navbar>
 					<Switch>
@@ -89,7 +89,7 @@ function App() {
 							<Graph />
 						</Route>
 					</Switch>
-				</Router>
+				</HashRouter>
 			) : (
 				<div className="App">
 					<header className="App-header">
