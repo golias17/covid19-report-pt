@@ -1,6 +1,6 @@
 # Covid19 Report PT
 
-Website com informação sobre os dados covid19 em Portugal, foco no progresso diário do vírus bem como da vacinas e alguns gráficos para comparar. O site é automatico e é alimentado pelos ficheiro fornecidos pela dssg-pt(https://github.com/dssg-pt)/covid19pt-data(https://github.com/dssg-pt/covid19pt-data)
+Website com informação sobre os dados covid19 em Portugal, foco no progresso diário do vírus bem como da vacinas e alguns gráficos para comparar. O site é automatico e é alimentado pelos ficheiro fornecidos pela dssg-pt(https://github.com/dssg-pt) / covid19pt-data(https://github.com/dssg-pt/covid19pt-data)
 
 ## Feito:
 
