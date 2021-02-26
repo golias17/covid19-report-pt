@@ -40,7 +40,7 @@ const report = (data) => {
 					).toFixed(2)
 				)}
 				{text(
-					'Obitos:',
+					'Óbitos:',
 					data[data.length - 2][13],
 					data[data.length - 2][13] - data[data.length - 3][13],
 					(
@@ -110,9 +110,9 @@ const copyText = (data) => {
 		'*\n' +
 		'Casos em Vigilância: ' +
 		data[data.length - 2][18].toString() +
-		' (' +
+		'; (' +
 		(data[data.length - 2][18] - data[data.length - 3][18]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][18] - data[data.length - 3][18]) /
 				data[data.length - 2][18]) *
@@ -120,12 +120,12 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
-		'Obitos: ' +
+		'%*\n' +
+		'Óbitos: ' +
 		data[data.length - 2][13] +
-		' (' +
+		'; (' +
 		(data[data.length - 2][13] - data[data.length - 3][13]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][13] - data[data.length - 3][13]) /
 				data[data.length - 2][13]) *
@@ -133,12 +133,12 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
+		'%*\n' +
 		'Casos Recuperados: ' +
 		data[data.length - 2][12] +
-		' (' +
+		'; (' +
 		(data[data.length - 2][12] - data[data.length - 3][12]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][12] - data[data.length - 3][13]) /
 				data[data.length - 2][12]) *
@@ -146,21 +146,21 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
+		'%*\n' +
 		'Casos Confirmados: ' +
 		data[data.length - 2][2] +
-		' (' +
+		'; (' +
 		data[data.length - 2][11] +
-		') *' +
+		'); *' +
 		((data[data.length - 2][11] / data[data.length - 2][2]) * 100)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
+		'%*\n' +
 		'Casos Ativos: ' +
 		data[data.length - 2][86] +
-		' (' +
+		'; (' +
 		(data[data.length - 2][86] - data[data.length - 3][86]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][86] - data[data.length - 3][86]) /
 				data[data.length - 2][86]) *
@@ -168,12 +168,12 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
+		'%*\n' +
 		'Casos Internados na Enfermaria: ' +
 		data[data.length - 2][87] +
-		' (' +
+		'; (' +
 		(data[data.length - 2][87] - data[data.length - 3][87]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][87] - data[data.length - 3][87]) /
 				data[data.length - 2][87]) *
@@ -181,12 +181,12 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*\n' +
+		'%*\n' +
 		'Casos Internados em UCI: ' +
 		data[data.length - 2][15] +
-		' (' +
+		'; (' +
 		(data[data.length - 2][15] - data[data.length - 3][15]).toString() +
-		') *' +
+		'); *' +
 		(
 			((data[data.length - 2][15] - data[data.length - 3][15]) /
 				data[data.length - 2][15]) *
@@ -194,7 +194,7 @@ const copyText = (data) => {
 		)
 			.toFixed(2)
 			.toString() +
-		'*';
+		'%*';
 
 	return {
 		text,
