@@ -56,7 +56,7 @@ function App() {
 
 	useEffect(() => {
 		if (amostras !== null && vacinas !== null && data !== null) {
-			//setLoading(false);
+			setLoading(false);
 		}
 	}, [amostras, vacinas, data]);
 
