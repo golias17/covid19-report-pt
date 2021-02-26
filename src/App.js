@@ -104,9 +104,18 @@ function App() {
 			) : (
 				<div className="App">
 					<header className="App-header">
-						<p>Fetching Covid19 data!</p>
-						<p>It's ok, this is not transmissible</p>
-						<Spinner animation="border" variant="danger" />
+						<div
+							style={{
+								flex: 1,
+								justifyContent: 'center',
+								textAlign: 'center',
+								alignItems: 'center',
+							}}
+						>
+							<p>À procura de dados do Covid19!</p>
+							<p>Não te preocupes, não é transmissível</p>
+							<Spinner animation="border" variant="danger" />
+						</div>
 					</header>
 				</div>
 			)}
