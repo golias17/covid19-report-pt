@@ -56,7 +56,7 @@ function App() {
 
 	useEffect(() => {
 		if (amostras !== null && vacinas !== null && data !== null) {
-			setLoading(false);
+			//setLoading(false);
 		}
 	}, [amostras, vacinas, data]);
 
@@ -103,19 +103,10 @@ function App() {
 				</div>
 			) : (
 				<div className="App">
-					<header className="App-header">
-						<div
-							style={{
-								flex: 1,
-								justifyContent: 'center',
-								textAlign: 'center',
-								alignItems: 'center',
-							}}
-						>
-							<p>À procura de dados do Covid19!</p>
-							<p>Não te preocupes, não é transmissível</p>
-							<Spinner animation="border" variant="danger" />
-						</div>
+					<header className="App-header" style={{ justifyContent: 'center' }}>
+						<p>À procura de dados do Covid19!</p>
+						<p>Não te preocupes, não é transmissível</p>
+						<Spinner animation="border" variant="danger" />
 					</header>
 				</div>
 			)}
