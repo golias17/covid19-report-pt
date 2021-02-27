@@ -12,8 +12,10 @@ const card = (typeColor, arrow, header, line1, line2, line3, line4) => {
 				<Card.Title style={{ textAlign: 'center', fontSize: 18 }}>
 					{header}
 				</Card.Title>
-				<Card.Subtitle className="mb-2 text-muted">{line1}</Card.Subtitle>
-				<Card.Text>
+				<Card.Subtitle className="mb-2 text-muted" style={{ fontSize: 11 }}>
+					{line1}
+				</Card.Subtitle>
+				<Card.Text style={{ fontSize: 14 }}>
 					{arrow === 'up' && <Icon.ArrowUpCircle color={typeColor} size={40} />}
 					{arrow === 'down' && (
 						<Icon.ArrowDownCircle color={typeColor} size={40} />
@@ -30,7 +32,7 @@ const card = (typeColor, arrow, header, line1, line2, line3, line4) => {
 		</Card>
 	);
 };
-const Visual = (props) => {
+const Covid = (props) => {
 	const data = props.info;
 
 	return (
@@ -50,8 +52,8 @@ const Visual = (props) => {
 									data[data.length - 3][2] - data[data.length - 4][2]
 									? 'up'
 									: 'down',
-								'Casos Confirmados',
-								'Hoje vs Ontem',
+								'Confirmados',
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
 								'Total: ' +
 									data[data.length - 2][2] +
 									' vs ' +
@@ -85,8 +87,8 @@ const Visual = (props) => {
 									data[data.length - 3][12] - data[data.length - 4][12]
 									? 'up'
 									: 'down',
-								'Casos Recuperados',
-								'Hoje vs Ontem',
+								'Recuperados',
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
 								'Total: ' +
 									data[data.length - 2][12] +
 									' vs ' +
@@ -123,7 +125,7 @@ const Visual = (props) => {
 									? 'up'
 									: 'down',
 								'Óbitos',
-								'Hoje vs Ontem',
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
 								'Total: ' +
 									data[data.length - 2][13] +
 									' vs ' +
@@ -156,14 +158,25 @@ const Visual = (props) => {
 									? 'up'
 									: 'down',
 								'Ativos',
-								'Hoje',
-								'Total: ' + data[data.length - 2][86],
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
+								'Total: ' +
+									data[data.length - 2][86] +
+									' vs ' +
+									data[data.length - 3][86],
 								'Dif: ' +
-									(data[data.length - 2][86] - data[data.length - 3][86]),
+									(data[data.length - 2][86] - data[data.length - 3][86]) +
+									' vs ' +
+									(data[data.length - 3][86] - data[data.length - 4][86]),
 								'Perc: ' +
 									(
 										((data[data.length - 2][86] - data[data.length - 3][86]) /
 											data[data.length - 2][86]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[data.length - 3][86] - data[data.length - 4][86]) /
+											data[data.length - 3][86]) *
 										100
 									).toFixed(2) +
 									'%'
@@ -180,14 +193,25 @@ const Visual = (props) => {
 									? 'up'
 									: 'down',
 								'Enfermaria',
-								'Hoje',
-								'Total: ' + data[data.length - 2][87],
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
+								'Total: ' +
+									data[data.length - 2][87] +
+									' vs ' +
+									data[data.length - 3][87],
 								'Dif: ' +
-									(data[data.length - 2][87] - data[data.length - 3][87]),
+									(data[data.length - 2][87] - data[data.length - 3][87]) +
+									' vs ' +
+									(data[data.length - 3][87] - data[data.length - 4][87]),
 								'Perc: ' +
 									(
 										((data[data.length - 2][87] - data[data.length - 3][87]) /
 											data[data.length - 2][87]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[data.length - 3][87] - data[data.length - 4][87]) /
+											data[data.length - 3][87]) *
 										100
 									).toFixed(2) +
 									'%'
@@ -202,14 +226,25 @@ const Visual = (props) => {
 									? 'up'
 									: 'down',
 								'UCI',
-								'Hoje',
-								'Total: ' + data[data.length - 2][15],
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
+								'Total: ' +
+									data[data.length - 2][15] +
+									' vs ' +
+									data[data.length - 3][15],
 								'Dif: ' +
-									(data[data.length - 2][15] - data[data.length - 3][15]),
+									(data[data.length - 2][15] - data[data.length - 3][15]) +
+									' vs ' +
+									(data[data.length - 3][15] - data[data.length - 4][15]),
 								'Perc: ' +
 									(
 										((data[data.length - 2][15] - data[data.length - 3][15]) /
 											data[data.length - 2][15]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[data.length - 3][15] - data[data.length - 4][15]) /
+											data[data.length - 3][15]) *
 										100
 									).toFixed(2) +
 									'%'
@@ -226,14 +261,25 @@ const Visual = (props) => {
 									? 'up'
 									: 'down',
 								'Vigilância',
-								'Hoje',
-								'Total: ' + data[data.length - 2][18],
+								data[data.length - 2][0] + ' vs ' + data[data.length - 3][0],
+								'Total: ' +
+									data[data.length - 2][18] +
+									' vs ' +
+									data[data.length - 3][18],
 								'Dif: ' +
-									(data[data.length - 2][18] - data[data.length - 3][18]),
+									(data[data.length - 2][18] - data[data.length - 3][18]) +
+									' vs ' +
+									(data[data.length - 3][18] - data[data.length - 4][18]),
 								'Perc: ' +
 									(
 										((data[data.length - 2][18] - data[data.length - 3][18]) /
 											data[data.length - 2][18]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[data.length - 3][18] - data[data.length - 4][18]) /
+											data[data.length - 3][18]) *
 										100
 									).toFixed(2) +
 									'%'
@@ -246,4 +292,4 @@ const Visual = (props) => {
 	);
 };
 
-export default Visual;
+export default Covid;

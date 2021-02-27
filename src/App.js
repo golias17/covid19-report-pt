@@ -3,14 +3,14 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import { readRemoteFile } from 'react-papaparse';
 import Spinner from 'react-bootstrap/Spinner';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import Image from 'react-bootstrap/Image';
+import { Nav, Navbar, Image, NavDropdown } from 'react-bootstrap';
 import covid from './images/covid-40.jpg';
 
 import Text from './components/Text';
+import Covid from './components/Covid';
+import Testes from './components/Testes';
+import Vacinas from './components/Vacinas';
 import Graph from './components/Graph';
-import Visual from './components/Visual';
 
 function App() {
 	const [loading, setLoading] = useState(true);
@@ -74,26 +74,45 @@ function App() {
 							<Navbar.Brand>
 								<Image src={covid} roundedCircle />
 							</Navbar.Brand>
-							<Nav
-								className="mr-auto"
-								style={{
-									textAlign: 'center',
-									alignItems: 'center',
-								}}
-							>
-								<Nav.Link href="/covid19-report-pt/#/">Sumário</Nav.Link>
-								<Nav.Link href="/covid19-report-pt/#/visual">
-									Sumário Visual
-								</Nav.Link>
-								<Nav.Link href="/covid19-report-pt/#/graph">Graficos</Nav.Link>
-							</Nav>
+							<Navbar.Toggle aria-controls="basic-navbar-nav" />
+							<Navbar.Collapse id="basic-navbar-nav">
+								<Nav
+									className="mr-auto"
+									style={{
+										textAlign: 'center',
+										alignItems: 'center',
+									}}
+								>
+									<Nav.Link href="/covid19-report-pt/#/">Sumário</Nav.Link>
+									<NavDropdown title="Dashboard" id="basic-nav-dropdown">
+										<NavDropdown.Item href="/covid19-report-pt/#/covid">
+											Covid
+										</NavDropdown.Item>
+										<NavDropdown.Item href="/covid19-report-pt/#/testes">
+											Testes
+										</NavDropdown.Item>
+										<NavDropdown.Item href="/covid19-report-pt/#/vacinas">
+											Vacinas
+										</NavDropdown.Item>
+									</NavDropdown>
+									<Nav.Link href="/covid19-report-pt/#/graph">
+										Graficos
+									</Nav.Link>
+								</Nav>
+							</Navbar.Collapse>
 						</Navbar>
 						<Switch>
 							<Route exact path="/" component={Text}>
 								<Text info={data} />
 							</Route>
-							<Route path="/visual" component={Visual}>
-								<Visual info={data} />
+							<Route path="/covid" component={Covid}>
+								<Covid info={data} />
+							</Route>
+							<Route path="/testes" component={Testes}>
+								<Testes info={amostras} />
+							</Route>
+							<Route path="/vacinas" component={Vacinas}>
+								<Vacinas info={vacinas} />
 							</Route>
 							<Route path="/graph" component={Graph}>
 								<Graph />
