@@ -96,7 +96,7 @@ function App() {
 										</NavDropdown.Item>
 									</NavDropdown>
 									<Nav.Link href="/covid19-report-pt/#/graph">
-										Graficos
+										Gráficos
 									</Nav.Link>
 								</Nav>
 							</Navbar.Collapse>

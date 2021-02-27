@@ -1,8 +1,6 @@
 import React from 'react';
 import './../App.css';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
+import { Row, Col, Card } from 'react-bootstrap';
 import * as Icon from 'react-bootstrap-icons';
 
 const card = (typeColor, arrow, header, line1, line2, line3, line4) => {
