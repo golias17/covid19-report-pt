@@ -115,7 +115,7 @@ function App() {
 								<Vacinas info={vacinas} />
 							</Route>
 							<Route path="/graph" component={Graph}>
-								<Graph />
+								<Graph info={data} />
 							</Route>
 						</Switch>
 					</HashRouter>
