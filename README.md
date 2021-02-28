@@ -10,6 +10,7 @@ Link do site: https://golias17.github.io/covid19-report-pt/#/
 - Dashboard Covid: relatório do covid em modo dashboard, e possibilidade de comparar dias
 - Dashboard Testes: relatório dos testes em modo dashboard
 - Dashboard Vacinas: relatório das vacinas em modo dashboard
+- Gráficos: possibilidade de ver 3 graficos, hospitalizações, mortes e taxa de testes positivos
 
 ## TO DO:
 
@@ -18,4 +19,4 @@ Link do site: https://golias17.github.io/covid19-report-pt/#/
 - Funcionalidade: possibilidade de comparar duas datas no dashboard covid ✅
 - Extra: Decidir se vale a pena adicionar informação do progresso de vacinação ao sumário
 - Dashboard Vacinas: Criar um novo dashboard para as vacinas ✅
-- Gráficos: Começar a trabalhar nas representações gráficas
+- Gráficos: Começar a trabalhar nas representações gráficas wip
