@@ -250,6 +250,68 @@ const Covid = (props) => {
 					<Row style={{ margin: 0, padding: 0 }}>
 						<Col style={{ margin: 0, padding: 0 }}>
 							{card(
+								Number(data[startIndex][18]) > Number(data[endIndex][18])
+									? 'red'
+									: 'green',
+								Number(data[startIndex][18]) > Number(data[endIndex][18])
+									? 'up'
+									: 'down',
+								'Vigilância',
+								data[startIndex][0] + ' vs ' + data[endIndex][0],
+								'Total: ' + data[startIndex][18] + ' vs ' + data[endIndex][18],
+								'Dif: ' +
+									(data[startIndex][18] - data[startIndex - 1][18]) +
+									' vs ' +
+									(data[endIndex][18] - data[endIndex - 1][18]),
+								'Perc: ' +
+									(
+										((data[startIndex][18] - data[startIndex - 1][18]) /
+											data[startIndex][18]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[endIndex][18] - data[endIndex - 1][18]) /
+											data[endIndex][18]) *
+										100
+									).toFixed(2) +
+									'%'
+							)}
+						</Col>
+						<Col style={{ margin: 0, padding: 0 }}>
+							{card(
+								Number(data[startIndex][14]) > Number(data[endIndex][14])
+									? 'red'
+									: 'green',
+								Number(data[startIndex][14]) > Number(data[endIndex][14])
+									? 'up'
+									: 'down',
+								'Internados',
+								data[startIndex][0] + ' vs ' + data[endIndex][0],
+								'Total: ' + data[startIndex][14] + ' vs ' + data[endIndex][14],
+								'Dif: ' +
+									(data[startIndex][14] - data[startIndex - 1][14]) +
+									' vs ' +
+									(data[endIndex][14] - data[endIndex - 1][14]),
+								'Perc: ' +
+									(
+										((data[startIndex][14] - data[startIndex - 1][14]) /
+											data[startIndex][14]) *
+										100
+									).toFixed(2) +
+									'% vs ' +
+									(
+										((data[endIndex][14] - data[endIndex - 1][14]) /
+											data[endIndex][14]) *
+										100
+									).toFixed(2) +
+									'%'
+							)}
+						</Col>
+					</Row>
+					<Row style={{ margin: 0, padding: 0 }}>
+						<Col style={{ margin: 0, padding: 0 }}>
+							{card(
 								Number(data[startIndex][87]) > Number(data[endIndex][87])
 									? 'red'
 									: 'green',
@@ -303,38 +365,6 @@ const Covid = (props) => {
 									(
 										((data[endIndex][15] - data[endIndex - 1][15]) /
 											data[endIndex][15]) *
-										100
-									).toFixed(2) +
-									'%'
-							)}
-						</Col>
-					</Row>
-					<Row style={{ margin: 0, padding: 0 }}>
-						<Col style={{ margin: 0, padding: 0 }}>
-							{card(
-								Number(data[startIndex][18]) > Number(data[endIndex][18])
-									? 'red'
-									: 'green',
-								Number(data[startIndex][18]) > Number(data[endIndex][18])
-									? 'up'
-									: 'down',
-								'Vigilância',
-								data[startIndex][0] + ' vs ' + data[endIndex][0],
-								'Total: ' + data[startIndex][18] + ' vs ' + data[endIndex][18],
-								'Dif: ' +
-									(data[startIndex][18] - data[startIndex - 1][18]) +
-									' vs ' +
-									(data[endIndex][18] - data[endIndex - 1][18]),
-								'Perc: ' +
-									(
-										((data[startIndex][18] - data[startIndex - 1][18]) /
-											data[startIndex][18]) *
-										100
-									).toFixed(2) +
-									'% vs ' +
-									(
-										((data[endIndex][18] - data[endIndex - 1][18]) /
-											data[endIndex][18]) *
 										100
 									).toFixed(2) +
 									'%'
