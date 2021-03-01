@@ -140,7 +140,7 @@ const copyText = (data) => {
 		(data[data.length - 2][12] - data[data.length - 3][12]).toString() +
 		'); *' +
 		(
-			((data[data.length - 2][12] - data[data.length - 3][13]) /
+			((data[data.length - 2][12] - data[data.length - 3][12]) /
 				data[data.length - 2][12]) *
 			100
 		)
